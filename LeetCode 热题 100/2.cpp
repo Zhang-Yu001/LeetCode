@@ -12,7 +12,7 @@ public:
             results.emplace_back(it.second);
         }
         return results;
-    
+     
         # vector<vector<string>> results;
         # vector<string> s;
         # unordered_map<string, vector<string>> hashtable;
