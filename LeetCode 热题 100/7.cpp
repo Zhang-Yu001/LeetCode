@@ -1,6 +1,7 @@
 class Solution {
 public:
     int trap(vector<int>& height) {
+        
         // 双指针
         int n = height.size() - 1, res = 0;
         int left = 0, right = n, leftmax = 0, rightmax = 0;
@@ -27,7 +28,7 @@ public:
             res += min(leftmax[i], rightmax[i]) - height[i];
         }
         return res;
-        
+
         // my solution
         int n = height.size();
         int left = 0, right = 0, res = 0;
