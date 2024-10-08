@@ -13,7 +13,7 @@ public:
                 if(left == right) break;
                 if(nums[left] + nums[right] == target) res.push_back({nums[i], nums[left], nums[right]});
             }
-        }
+        } 
         return res;
     }
 };
