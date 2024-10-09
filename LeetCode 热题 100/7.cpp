@@ -29,6 +29,20 @@ public:
         }
         return res;
 
+        // 单调栈
+        stack<int> st;
+        int n = height.size(), res = 0;
+        for(int i = 0; i < n; i++){
+            while(!st.empty() && height[i] > height[st.top()]){
+                int j = st.top();
+                st.pop();
+                if(st.empty()) break;
+                res += (i - st.top() - 1) * (min(height[i], height[st.top()]) - height[j]);
+            }
+            st.push(i);
+        }
+        return res;
+
         // my solution
         int n = height.size();
         int left = 0, right = 0, res = 0;
